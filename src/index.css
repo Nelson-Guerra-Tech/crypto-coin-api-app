@@ -8,4 +8,16 @@
 
 body {
   font-family: 'Poppins', sans-serif !important;
+  background-color: #26272b;
+  color: #f4f4f4;
+}
+
+a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem;
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import CoinItem from './CoinItem';
 
+// styles
+import './Coins.css';
+
 function Coins({ coins }) {
   return (
     <div className='container'>
