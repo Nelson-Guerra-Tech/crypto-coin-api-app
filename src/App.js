@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BrowserRouter, Routes, Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // components
+import Navbar from './components/Navbar';
 import Coins from './components/Coins';
 // styles
 import './index.css';
@@ -33,9 +34,14 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Coins coins={coins} />
-    </>
+    <BrowserRouter>
+      <>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Coins coins={coins} />} exact />
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 }
 

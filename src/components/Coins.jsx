@@ -14,7 +14,7 @@ function Coins({ coins }) {
       </div>
 
       {coins.map((coin) => {
-        return <CoinItem coinItem={coin} />;
+        return <CoinItem coinItem={coin} key={coin.id} />;
       })}
     </div>
   );
