@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter, Routes, Router } from 'react-router-dom';
 
+// components
+import Coins from './components/Coins';
+// styles
 import './index.css';
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
         console.log(data);
         setCoins(data);
       };
+
       fetchData();
     } catch (error) {
       console.log(error.message);
@@ -30,7 +34,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello</h1>
+      <Coins coins={coins} />
     </>
   );
 }
